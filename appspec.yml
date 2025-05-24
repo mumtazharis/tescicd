@@ -1,7 +1,7 @@
 version: 0.0
 os: linux
 files:
-  - source: / # Ini akan memindahkan SEMUA file dan folder dari root artefak
+  - source: / # Ini akan memindahkan SEMUA file dari root artefak
     destination: /home/ubuntu/
 
 hooks:
