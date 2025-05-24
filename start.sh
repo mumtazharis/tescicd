@@ -1,3 +1,3 @@
 #!/bin/bash
-chmod +x /home/ubuntu/hello-app
-/home/ubuntu/hello-app > /dev/null 2>&1 &
+chmod +x /home/ubuntu/tescicd
+/home/ubuntu/tescicd > /dev/null 2>&1 &
