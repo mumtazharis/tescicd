@@ -1,7 +1,7 @@
 version: 0.0
 os: linux
 files:
-  - source: hello-app
+  - source: tescicd
     destination: /home/ubuntu/
 
 hooks:

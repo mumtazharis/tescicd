@@ -9,7 +9,7 @@ phases:
   build:
     commands:
       - echo Building Go app...
-      - go build -o hello-app main.go
+      - go build -o tescicd main.go
 artifacts:
   files:
-    - hello-app
+    - tescicd
