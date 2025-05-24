@@ -3,20 +3,17 @@ version: 0.2
 phases:
   install:
     runtime-versions:
-      golang: 1.20 # Sesuaikan versi Go Anda jika berbeda
+      golang: 1.20
     commands:
       - go version
   build:
     commands:
-      - go build -o tescicd main.go # Ini akan membuat file 'tescicd' di direktori kerja
-      - ls -l # Cek lagi di sini untuk memastikan 'tescicd' muncul
+      - echo "Starting Go build..."
+      - go build -o tescicd main.go
+      - ls -lh
+      - file tescicd
 
 artifacts:
   files:
-    - 'appspec.yml'  # Pastikan appspec.yml termasuk
-    - 'start.sh'     # Pastikan start.sh termasuk
-    - 'tescicd'      # **INI YANG PENTING:** Pastikan executable Anda termasuk!
-    # Anda bisa tambahkan file lain dari root direktori Anda jika diperlukan, misal:
-    # - 'index.html'
-    # - 'static/**/*'
-  discard-paths: no # Pastikan ini 'no' jika Anda ingin menjaga struktur folder
+    - '**/*'           # Tangkap semua file
+  discard-paths: no     # Pertahankan struktur folder
