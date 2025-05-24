@@ -3,3 +3,9 @@ os: linux
 files:
   - source: hello-app
     destination: /home/ubuntu/
+
+hooks:
+  ApplicationStart:
+    - location: start.sh
+      timeout: 60
+      runas: ubuntu
