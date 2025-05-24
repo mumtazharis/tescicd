@@ -8,12 +8,17 @@ phases:
       - go version
   build:
     commands:
-      - echo "Starting Go build..."
+      - echo "Building Go app..."
+      - pwd                      # Tampilkan direktori kerja
+      - ls -lh                   # Lihat file yang tersedia
       - go build -o tescicd main.go
-      - ls -lh
+      - chmod +x tescicd
+      - ls -lh tescicd
       - file tescicd
-
+      
 artifacts:
   files:
-    - '**/*'           # Tangkap semua file
-  discard-paths: no     # Pertahankan struktur folder
+    - tescicd
+    - appspec.yml
+    - start.sh
+  discard-paths: no
